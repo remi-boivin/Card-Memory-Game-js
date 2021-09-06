@@ -1,0 +1,40 @@
+@font-face {
+    font-family: "Mario";
+    src: url("./assets/fonts/smbfont.ttf") format("ttf");
+}
+
+#main-menu {
+    display: flex;
+    margin: auto;
+    height: auto;
+    width: 100vw;
+    height: 47.7vw;
+}
+
+.main-item {
+    display: flex;
+    margin-top: auto;
+    /* background-color: red; */
+    width: auto;
+    height: 140px;
+    opacity: 0.3;
+}
+
+.main-item:hover {
+    opacity: 0.8;
+    background-image: url('../mushroom.png');
+    background-repeat: no-repeat;
+}
+
+#main-menu>.row>.main-item>center {
+    font-size: 5vw;
+    width: 640px !important;
+    font-family: "Mario";
+}
+
+.row {
+    width: 640px !important;
+    height: 640px !important;
+    /* background-color: green ; */
+    margin: auto;
+}
