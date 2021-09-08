@@ -7,15 +7,12 @@ let [firstCard, secondCard] = [null, null];
 function flipCard() {
   if (lockBoard) return;
   if (this === firstCard) return;
-
   this.classList.add('flip');
-
   if (!hasFlippedCard) {
     hasFlippedCard = true;
     firstCard = this;
     return;
   }
-
   secondCard = this;
   lockBoard = true;
 
@@ -37,7 +34,6 @@ function disableCards() {
   if (shuffle_cards == 0){
   alert('congrat')
   }
-
   resetBoard();
 }
 
@@ -72,7 +68,12 @@ cards.forEach(card => card.addEventListener('click', flipCard));
 function start() {
   board = document.getElementById('memory-game');
   menu = document.getElementById('main-menu');
-  // const board = document.querySelectorAll('.');
+  back_menu = document.getElementById('back');
   menu.style.visibility = "hidden";  
   board.style.visibility = "visible";
+  back_menu.style.visibility = "visible";
+}
+
+function back() {
+  document.location.reload();
 }
